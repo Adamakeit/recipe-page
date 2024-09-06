@@ -1,0 +1,143 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+  --brown800: hsl(14, 45%, 36%);
+  --rose800: hsl(332, 51%, 32%);
+  --rose50: hsl(330, 100%, 98%);
+}
+
+@font-face {
+  font-family: "Outfits";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.woff2);
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfits";
+}
+.card_image img {
+  width: 100%;
+}
+h1 {
+  margin-inline-start: 1.5rem;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  font-family: "YoungSerif";
+}
+.nutmeg {
+  color: var(--brown800);
+}
+h2 {
+  font-family: "YoungSerif";
+}
+p {
+  margin-inline-start: 1.5rem;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+  color: var(--stone600);
+}
+.card_preparation {
+  background-color: var(--rose50);
+  margin-inline: 1.7rem;
+  padding: 1rem;
+  border-radius: 10px;
+  & h2 {
+    margin-block-end: 1rem;
+    font-family: "Outfits";
+    color: var(--rose800);
+  }
+  & ul {
+    padding-inline-start: 1rem;
+    & li {
+      margin-block-end: 1.3rem;
+      color: var(--stone600);
+    }
+  }
+}
+.card_ingredient {
+  margin-inline-start: 1rem;
+  & h2 {
+    margin-block-end: 1rem;
+  }
+  & ul {
+    margin-inline-start: 0.5rem;
+    & li {
+      margin-block-end: 1.3rem;
+    }
+  }
+}
+hr {
+  text-align: center;
+  margin-inline: 1rem;
+  margin-inline-start: 0px;
+  margin-block-end: 1rem;
+}
+.card_instruction {
+  margin-inline-start: 1.5rem;
+  & ol {
+    padding-block-start: 0.7rem;
+    & li {
+      margin-block-end: 1rem;
+    }
+  }
+  & span {
+    font-weight: 700;
+  }
+}
+.card_nutrition {
+  margin-inline: 1rem;
+  & h2 {
+    margin-block-end: 1rem;
+  }
+  & p {
+    margin-block-end: 1rem;
+    color: var(--stone600);
+    margin-inline-start: 0rem;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table td {
+  border-bottom: 1px solid black;
+  padding: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  body {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--stone100);
+    padding: 1.5rem;
+  }
+  .card {
+    width: 500px;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  .card_preparation {
+    border-radius: 10px;
+  }
+  .card_image {
+    width: 100%;
+  }
+  .card_image img {
+    border-radius: 10px;
+  }
+}
